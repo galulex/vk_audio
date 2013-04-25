@@ -1,0 +1,16 @@
+{
+  "name": "Remove VK audio",
+  "description": "Adds remove current audio in VK",
+  "version": "1.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Remove",
+      "default_icon": "icon16x16.png"
+  },
+  "manifest_version": 2
+}
