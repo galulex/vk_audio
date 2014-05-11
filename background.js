@@ -1,5 +1,5 @@
 function isVkUrl(url) {
-  return url.indexOf("http://vk.com/audio") == 0;
+  return url.indexOf("https://vk.com/audio") == 0;
 }
 
 function removeAudio() {
