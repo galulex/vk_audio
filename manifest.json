@@ -16,5 +16,24 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "manifest_version": 2
-}
+  "commands": {
+    "Play / Pause": {
+      "suggested_key": {
+        "windows": "Alt+S",
+        "mac": "Alt+S",
+        "chromeos": "Alt+S",
+        "linux": "Alt+S"
+      },
+      "description": "Toogle Play / Pause"
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+X",
+        "mac": "Alt+X",
+        "chromeos": "Alt+X",
+        "linux": "Alt+X"
+      }
+    }
+  },
+    "manifest_version": 2
+  }
