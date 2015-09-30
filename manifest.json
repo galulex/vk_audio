@@ -1,13 +1,11 @@
 {
-  "name": "Remove VK audio",
-  "description": "Adds remove current audio in VK",
-  "version": "1.1",
+  "name": "VK audio",
+  "description": "Simple extension for controlling vk audio recommendations",
+  "version": "1.0",
   "background": {
     "scripts": ["background.js"]
   },
-  "permissions": [
-    "tabs", "http://*/*", "https://*/*"
-  ],
+  "permissions": ["tabs", "https://vk.com/audio*"],
   "browser_action": {
     "default_title": "Remove",
     "default_icon": "icon16.png"
@@ -35,5 +33,5 @@
       }
     }
   },
-    "manifest_version": 2
-  }
+  "manifest_version": 2
+}
