@@ -1,7 +1,7 @@
 {
   "name": "VK audio",
   "description": "Simple extension for controlling vk audio recommendations",
-  "version": "1.0",
+  "version": "1.1",
   "background": {
     "scripts": ["background.js"]
   },
@@ -19,6 +19,24 @@
         "mac": "Alt+S",
         "chromeos": "Alt+S",
         "linux": "Alt+S"
+      },
+      "description": "Toogle Play / Pause"
+    },
+    "Next Song": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Right",
+        "mac": "Ctrl+Shift+Right",
+        "chromeos": "Ctrl+Shift+Right",
+        "linux": "Ctrl+Shift+Right"
+      },
+      "description": "Toogle Play / Pause"
+    },
+    "Previous Song": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Left",
+        "mac": "Ctrl+Shift+Left",
+        "chromeos": "Ctrl+Shift+Left",
+        "linux": "Ctrl+Shift+Left"
       },
       "description": "Toogle Play / Pause"
     },
