@@ -24,21 +24,21 @@
     },
     "Next Song": {
       "suggested_key": {
-        "windows": "Ctrl+Shift+Right",
-        "mac": "Ctrl+Shift+Right",
-        "chromeos": "Ctrl+Shift+Right",
-        "linux": "Ctrl+Shift+Right"
+        "windows": "Alt+N",
+        "mac": "Alt+N",
+        "chromeos": "Alt+N",
+        "linux": "Alt+N"
       },
-      "description": "Toogle Play / Pause"
+      "description": "Next Song"
     },
     "Previous Song": {
       "suggested_key": {
-        "windows": "Ctrl+Shift+Left",
-        "mac": "Ctrl+Shift+Left",
-        "chromeos": "Ctrl+Shift+Left",
-        "linux": "Ctrl+Shift+Left"
+        "windows": "Alt+P",
+        "mac": "Alt+P",
+        "chromeos": "Alt+P",
+        "linux": "Alt+P"
       },
-      "description": "Toogle Play / Pause"
+      "description": "Previous Song"
     },
     "_execute_browser_action": {
       "suggested_key": {
