@@ -1,0 +1,32 @@
+body {
+  background: #e2e2e2;
+  margin: 0;
+  padding: 0;
+  width: 260px;
+}
+
+button {
+  border: none;
+  font-size: 2em;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: #2e2e2e;
+  transition: background .3s;
+}
+
+button:hover {
+  background: #6e6e6e;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  outline: none;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+}

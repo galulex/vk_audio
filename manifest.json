@@ -1,13 +1,14 @@
 {
   "name": "VK audio",
-  "description": "Simple extension for controlling vk audio recommendations",
-  "version": "1.1",
+  "description": "Simple extension for controlling vk player",
+  "version": "1.2",
   "background": {
     "scripts": ["background.js"]
   },
   "permissions": ["tabs", "https://vk.com/audio*"],
   "browser_action": {
-    "default_title": "Hide current recommendation"
+    "default_title": "VK audio",
+    "default_popup": "popup.html"
   },
   "icons": { "32": "icon32.png",
     "128": "icon128.png"
@@ -20,33 +21,42 @@
         "chromeos": "Alt+S",
         "linux": "Alt+S"
       },
-      "description": "Toogle Play / Pause"
+      "description": "Toogle Play / Pause",
+      "global": true
     },
-    "Next Song": {
+    "Forward": {
       "suggested_key": {
-        "windows": "Alt+N",
-        "mac": "Alt+N",
-        "chromeos": "Alt+N",
-        "linux": "Alt+N"
+        "windows": "Alt+F",
+        "mac": "Alt+F",
+        "chromeos": "Alt+F",
+        "linux": "Alt+F"
       },
-      "description": "Next Song"
+      "description": "Next Song",
+      "global": true
     },
-    "Previous Song": {
+    "Backward": {
       "suggested_key": {
-        "windows": "Alt+P",
-        "mac": "Alt+P",
-        "chromeos": "Alt+P",
-        "linux": "Alt+P"
+        "windows": "Alt+B",
+        "mac": "Alt+B",
+        "chromeos": "Alt+B",
+        "linux": "Alt+B"
       },
-      "description": "Previous Song"
+      "description": "Previous Song",
+      "global": true
     },
-    "_execute_browser_action": {
+    "Add": {
+      "description": "Add Song to playlist",
+      "global": true
+    },
+    "Remove": {
       "suggested_key": {
         "windows": "Alt+X",
         "mac": "Alt+X",
         "chromeos": "Alt+X",
         "linux": "Alt+X"
-      }
+      },
+      "description": "Remove Song",
+      "global": true
     }
   },
   "manifest_version": 2
