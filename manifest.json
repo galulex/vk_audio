@@ -1,11 +1,11 @@
 {
   "name": "VK audio",
   "description": "Simple extension for controlling vk player",
-  "version": "1.2",
+  "version": "1.3",
   "background": {
     "scripts": ["background.js"]
   },
-  "permissions": ["tabs", "https://vk.com/audio*"],
+  "permissions": ["tabs", "https://vk.com/audio*", "http://vk.com/audio*"],
   "browser_action": {
     "default_title": "VK audio",
     "default_popup": "popup.html"

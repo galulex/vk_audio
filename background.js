@@ -1,5 +1,5 @@
 function execute(code) {
-  chrome.tabs.query({url: 'https://vk.com/audio*'}, function(t){
+  chrome.tabs.query({url: '*://vk.com/*'}, function(t){
     if (!t[0]) return false;
     chrome.tabs.executeScript(t[0].id, {
       code: code
