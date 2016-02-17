@@ -2,7 +2,7 @@ body {
   background: #e2e2e2;
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 260px;
 }
 
 button {
@@ -11,9 +11,7 @@ button {
   padding: 5px 10px;
   cursor: pointer;
   background: #2e2e2e;
-  color: violet;
   transition: background .3s;
-  width: 40px;
 }
 
 button:hover {
