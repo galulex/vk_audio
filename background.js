@@ -1,17 +1,32 @@
+var bg = chrome.extension.getBackgroundPage(),
+  script = `
+    var btn = document.createElement('button');
+    btn.setAttribute('id', 'btn');
+    btn.setAttribute('onclick', "$code");
+    document.body.appendChild(btn);
+    btn.click();
+    btn.remove();
+  `;
+
 function execute(code) {
   chrome.tabs.query({url: '*://vk.com/*'}, function(t){
-    if (!t[0]) return false;
+    if (!t[0]) {
+      chrome.tabs.create({ url: 'https://vk.com/audio', pinned: true }, function(t){
+        execute(code);
+      })
+      return true
+    }
     chrome.tabs.executeScript(t[0].id, {
-      code: code
+      code: script.replace('$code', code)
     });
   });
 }
 
 var player = {
-  play: "document.getElementById('ac_play').click()",
-  forward: "document.getElementById('ac_next').click()",
-  backward: "document.getElementById('ac_prev').click()",
-  add: "document.getElementById('ac_add').click()",
+  play: "headPlayPause(event)",
+  forward: "audioPlayer.nextTrack()",
+  backward: "audioPlayer.prevTrack()",
+  add: "audioPlayer.addCurrentTrack()",
   remove:  "document.getElementsByClassName('audio current')[0].getElementsByClassName('audio_remove')[0].click()"
 }
 
@@ -25,14 +40,14 @@ var actions = {
 
 chrome.commands.onCommand.addListener(function(command) {
   if (Object.keys(actions).indexOf(command) < 0) return false;
-  execute(actions[command]);
+  bg.execute(actions[command]);
 });
 
 window.addEventListener('DOMContentLoaded', function() {
   buttons = document.getElementsByTagName('button')
   for(var i = 0; i < buttons.length; i++){
     buttons[i].addEventListener('click', function(){
-      execute(player[this.id]);
+      bg.execute(player[this.id]);
     }, false);
   }
 })

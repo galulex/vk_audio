@@ -1,7 +1,7 @@
 {
   "name": "VK audio",
   "description": "Simple extension for controlling vk player",
-  "version": "1.3",
+  "version": "1.4",
   "background": {
     "scripts": ["background.js"]
   },
