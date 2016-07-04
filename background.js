@@ -9,7 +9,7 @@ var bg = chrome.extension.getBackgroundPage(),
   `;
 
 function execute(code) {
-  chrome.tabs.query({url: '*://vk.com/*'}, function(t){
+  chrome.tabs.query({url: '*://*.vk.com/*'}, function(t){
     if (!t[0]) {
       chrome.tabs.create({ url: 'https://vk.com/audio', pinned: true }, function(t){
         execute(code);
@@ -23,17 +23,26 @@ function execute(code) {
 }
 
 var player = {
-  play: "headPlayPause(event)",
-  forward: "audioPlayer.nextTrack()",
-  backward: "audioPlayer.prevTrack()",
+  play: "document.querySelector('.audio_play').click()",
+  forward: "AudioPage.playNext()",
+  backward: "AudioPage.playPrev()",
   add: "audioPlayer.addCurrentTrack()",
-  remove:  "document.getElementsByClassName('audio current')[0].getElementsByClassName('audio_remove')[0].click()"
+  remove:  "document.querySelector('.audio_row_current #delete').click()",
+  download: function(){
+    var url = document.getElementsByClassName('audio current')[0].querySelector('input').value;
+    var a = document.createElement('a');
+    a.setAttribute('href', url);
+    a.setAttribute('download', 'Awesome');
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
 }
 
 var actions = {
   'Play / Pause': player.play,
-  'Next Song': player.next,
-  'Previous Song': player.prev,
+  'Backward': player.backward,
+  'Forward': player.forward,
   'Remove': player.remove,
   'Add': player.add
 }

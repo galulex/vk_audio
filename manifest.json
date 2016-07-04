@@ -5,7 +5,7 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "permissions": ["tabs", "https://vk.com/audio*", "http://vk.com/audio*"],
+  "permissions": ["tabs", "*://*.vk.com/audio*"],
   "browser_action": {
     "default_title": "VK audio",
     "default_popup": "popup.html"
