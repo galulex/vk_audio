@@ -24,8 +24,8 @@ function execute(code) {
 
 var player = {
   play: "document.querySelector('.audio_play').click()",
-  forward: "AudioPage.playNext()",
-  backward: "AudioPage.playPrev()",
+  forward: "getAudioPlayer().playNext()",
+  backward: "getAudioPlayer().playPrev()",
   add: "audioPlayer.addCurrentTrack()",
   remove:  "document.querySelector('.audio_row_current #delete').click()",
   download: function(){
