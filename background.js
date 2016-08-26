@@ -23,7 +23,7 @@ function execute(code) {
 }
 
 var player = {
-  play: "document.querySelector('.audio_play').click()",
+  play: "document.querySelector('.top_audio_player_play').click()",
   forward: "getAudioPlayer().playNext()",
   backward: "getAudioPlayer().playPrev()",
   add: "audioPlayer.addCurrentTrack()",
