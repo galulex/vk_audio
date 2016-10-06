@@ -26,7 +26,7 @@ var player = {
   play: "document.querySelector('.top_audio_player_play').click()",
   forward: "getAudioPlayer().playNext()",
   backward: "getAudioPlayer().playPrev()",
-  add: "audioPlayer.addCurrentTrack()",
+  add: "document.querySelector('.audio_page_player #add').click()",
   remove:  "document.querySelector('.audio_row_current #delete').click()",
   download: function(){
     var url = document.getElementsByClassName('audio current')[0].querySelector('input').value;
