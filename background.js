@@ -24,10 +24,9 @@ function execute(code) {
 
 var player = {
   play: "document.querySelector('.top_audio_player_play').click()",
-  forward: "getAudioPlayer().playNext()",
-  backward: "getAudioPlayer().playPrev()",
-  add: "document.querySelector('.audio_page_player #add').click()",
-  remove:  "document.querySelector('.audio_row_current #delete').click()",
+  forward: "document.querySelector('button.top_audio_player_next').click()",
+  backward: "document.querySelector('button.top_audio_player_prev').click()",
+  add: "document.querySelector('button#add').click()",
   download: function(){
     var url = document.getElementsByClassName('audio current')[0].querySelector('input').value;
     var a = document.createElement('a');
@@ -43,7 +42,6 @@ var actions = {
   'Play / Pause': player.play,
   'Backward': player.backward,
   'Forward': player.forward,
-  'Remove': player.remove,
   'Add': player.add
 }
 
