@@ -1,7 +1,7 @@
 {
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
-  "version": "2.0",
+  "version": "2.1",
   "default_locale": "ru",
   "homepage_url": "https://github.com/galulex/vk_audio",
   "background": {
