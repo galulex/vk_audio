@@ -1,0 +1,10 @@
+{
+  "appName": { "message": "VK Player" },
+  "appDesc": {
+    "message": "Control VK Player from a single extension. You can use your keybindings or the graphical interface to listen to your favourite music. Right click on the extension to open the options page, from there you can setup keybindings"
+  },
+  "backward": { "message": "Previous Song" },
+  "forward": { "message": "Next Song" },
+  "play": { "message": "Play / Pause" },
+  "add": { "message": "Add to my Music" }
+}

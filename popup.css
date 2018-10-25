@@ -1,8 +1,9 @@
 body {
-  background: #e2e2e2;
+  background: #2e2e2e;
   margin: 0;
   padding: 0;
-  width: 220px;
+  display: flex;
+  width: 200px;
 }
 
 button {
@@ -12,6 +13,8 @@ button {
   cursor: pointer;
   background: #2e2e2e;
   transition: background .3s;
+  text-align: center;
+  width: 50px;
 }
 
 button:hover {
@@ -29,4 +32,5 @@ button:focus {
 img {
   width: 32px;
   height: 32px;
+  pointer-events: none;
 }

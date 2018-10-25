@@ -1,15 +1,18 @@
 {
-  "name": "VK audio",
-  "description": "Simple extension for controlling vk player",
-  "version": "1.7",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "version": "1.8",
+  "default_locale": "ru",
+  "homepage_url": "https://github.com/galulex/vk_audio",
   "background": {
     "scripts": ["background.js"]
   },
   "permissions": ["tabs", "*://*.vk.com/audio*"],
   "browser_action": {
-    "default_title": "VK audio",
+    "default_title": "VK Player",
     "default_popup": "popup.html"
   },
+  "options_page": "options.html",
   "icons": { "32": "icon32.png",
     "128": "icon128.png"
   },
@@ -21,7 +24,7 @@
         "chromeos": "Alt+S",
         "linux": "Alt+S"
       },
-      "description": "Toogle Play / Pause",
+      "description": "__MSG_play__",
       "global": true
     },
     "Forward": {
@@ -31,7 +34,7 @@
         "chromeos": "Alt+F",
         "linux": "Alt+F"
       },
-      "description": "Next Song",
+      "description": "__MSG_forward__",
       "global": true
     },
     "Backward": {
@@ -41,11 +44,17 @@
         "chromeos": "Alt+B",
         "linux": "Alt+B"
       },
-      "description": "Previous Song",
+      "description": "__MSG_backward__",
       "global": true
     },
     "Add": {
-      "description": "Add Song to playlist",
+      "suggested_key": {
+        "windows": "Alt+A",
+        "mac": "Alt+A",
+        "chromeos": "Alt+A",
+        "linux": "Alt+A"
+      },
+      "description": "__MSG_add__",
       "global": true
     }
   },
