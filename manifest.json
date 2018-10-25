@@ -47,16 +47,6 @@
     "Add": {
       "description": "Add Song to playlist",
       "global": true
-    },
-    "Remove": {
-      "suggested_key": {
-        "windows": "Alt+X",
-        "mac": "Alt+X",
-        "chromeos": "Alt+X",
-        "linux": "Alt+X"
-      },
-      "description": "Remove Song",
-      "global": true
     }
   },
   "manifest_version": 2
